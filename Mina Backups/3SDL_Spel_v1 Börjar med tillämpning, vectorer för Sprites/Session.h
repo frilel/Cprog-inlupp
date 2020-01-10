@@ -1,0 +1,34 @@
+/*Vår instansiering av GameEnginge sker med Session.
+Innehåller en datasamling, vector, med pekare till Components som skall synas på skärmen.
+Den har i huvudsak två medlemsfunktioner: add() för att lägga till Components och
+run() som innehåller en händelseloop, där vid tangent/mushändelse skall components motsvarande
+funktioner anropas och göra det som skall hända. */
+
+#ifndef SESSION_H
+#define SESSION_H
+
+#include <vector>
+#include "GameEngine.h"
+#include "Sprite.h"
+
+
+
+class Session // förbjud konstruktorer?
+	{
+	public:
+		Session();
+		~Session();
+
+		void run();
+
+		void add(Sprite*);
+		void remove(Sprite*);
+
+	private:
+		GameEngine* gameEngine;
+		std::vector<Sprite*> activeSprites;
+		std::vector<Sprite*> addedSprites, removedSprites; /*under gång läggs saker in i added och i slutet av loppen flyttas allt
+		till vectorn activeSprites, eftersom att lägga till saker samtidigt som vectorn kanske används ger problem.*/
+};
+
+#endif
