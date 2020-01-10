@@ -27,8 +27,9 @@ void Laser::update(int winW, int winH, std::vector<Sprite*> &activeSprites)
 		imDead = true; // Försvinn
 		std::cout << "Laser Don't Want To Die!" << std::endl;
 	}
-
-	imDead = collisionTest(activeSprites);
+	if(imDead == false) { // om jag fortfarande lever: gör kollisionstest 
+		imDead = collisionTest(activeSprites);
+	}
 }
 
 bool Laser::collisionTest(std::vector<Sprite*> &activeSprites) {
@@ -36,6 +37,7 @@ bool Laser::collisionTest(std::vector<Sprite*> &activeSprites) {
 		if (s != this) { // kolla inte kollision med sig själv
 			if (s->isHostile() == true && SDL_HasIntersection(&getDestRect(), &s->getDestRect())) { // Kontrollerar om sprite är hostile och om destRect för Laser skär i destRect för Spriten i vectorn
 				std::cout << "Laser collision detected!" << std::endl;
+				s->move(0, -40);
 				s->kill();
 				return true; // Kollision sant
 			}

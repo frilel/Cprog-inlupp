@@ -21,9 +21,9 @@ public:
 	void run();
 	void clean();
 
-	void handleEvents( std::vector<Sprite*> &sprites);
-	void update( std::vector<Sprite*> &sprites);
-	void render( std::vector<Sprite*> &sprites);
+	void handleEvents( std::vector<Sprite*> &activeSprites);
+	void update( std::vector<Sprite*> & activeSprites);
+	void render( std::vector<Sprite*> & activeSprites);
 	
 	const int& getWindowWidth() const { return windowWidth; }
 	const int& getWindowHeight() const { return windowHeight; }

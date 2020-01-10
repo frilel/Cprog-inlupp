@@ -38,9 +38,10 @@ void Player::update(int winW, int winH, std::vector<Sprite*> &activeSprites) { /
 	// Player rör på sig enligt xpos, ypos
 	getDestRect().x = getXpos();
 	getDestRect().y = getYpos();
-
-	imDead = collisionTest(activeSprites); // returnerar true om player har kolliderat med någon annan Sprite
-		
+	
+	if (imDead == false) { // om jag fortfarande lever: gör kollisionstest
+		imDead = collisionTest(activeSprites); // returnerar true om player har kolliderat med någon annan Sprite
+	}
 			
 }
 

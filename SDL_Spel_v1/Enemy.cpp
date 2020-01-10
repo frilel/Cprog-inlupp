@@ -35,8 +35,8 @@ void Enemy::update(int winW, int winH, std::vector<Sprite*> &activeSprites) { //
 
 	getDestRect().x = getXpos(); // Spriten rör på sig enligt xpos, ypos
 	getDestRect().y = getYpos();
-
-	imDead = collisionTest(activeSprites); // Returnerar true vid kollision med sprite som inte är "hostile"
+	if(imDead == false) // om jag fortfarande lever: gör kollisionstest
+		imDead = collisionTest(activeSprites); // Returnerar true vid kollision med sprite som inte är "hostile"
 
 }
 
