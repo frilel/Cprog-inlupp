@@ -24,19 +24,19 @@ GameEngine::~GameEngine()
 }
 
 void GameEngine::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen) {
-	//Hämta vald storleken på window
+
 	windowWidth = width;
 	windowHeight = height;
 	if (SDLsystem.initSDL(title, xpos, ypos, width, height, fullscreen) == false)
-		isRunning = false;
+		isRunning = false; // Om initiering av SDL gick snett så startar inte spelloopen
 
 	map = new Map();
 	std::cout << "Map created!" << std::endl;
 }
 
-void GameEngine::run(){
+void GameEngine::run(int fps){
 
-	const int FPS = 60; // Om vi vill ändra FPS
+	const int FPS = fps; // Vald frames per second
 	const int frameDelay = 1000 / FPS; // Tiden för en sekund, i millisekunder, delat på så många frames vi vill köra
 	Uint32 frameStart;  // OBS! Enligt SDL: Körs programmet i mer än runt 49 dagar blir talet för stort för Uint32 och kan krascha
 	int frameTime;

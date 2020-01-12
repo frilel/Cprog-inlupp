@@ -6,7 +6,7 @@
 
 Player::~Player() {
 
-	gameOver(true);
+	gameOver(true); // Om player skulle dö blir det Game Over
 	std::cout << "Player destructor: Game Over" << std::endl;
 	
 }
@@ -39,8 +39,9 @@ void Player::update(int winW, int winH, std::vector<Sprite*> &activeSprites) { /
 	getDestRect().x = getXpos();
 	getDestRect().y = getYpos();
 	
-	if (imDead == false) { // om jag fortfarande lever: gör kollisionstest
-		imDead = collisionTest(activeSprites); // returnerar true om player har kolliderat med någon annan Sprite
+	if (isDead() == false) { // om jag fortfarande lever: gör kollisionstest
+		if (collisionTest(activeSprites)) // returnerar true om player har kolliderat med någon annan Sprite
+			kill(); // Dö vid kollision
 	}
 			
 }
@@ -52,6 +53,13 @@ void Player::keyDown(const SDL_Event& event) {
 	case SDLK_s: move(0, getSpeed()); break;
 	case SDLK_a: move(-getSpeed(), 0); break;
 	case SDLK_d: move(getSpeed(), 0); break;
+	//case SDLK_SPACE: shoot(); break;
+	}
+}
+
+void Player::keyUp(const SDL_Event& event) {
+	//std::cout << "Player event in Player.cpp!" << std::endl;
+	switch (event.key.keysym.sym) {
 	case SDLK_SPACE: shoot(); break;
 	}
 }

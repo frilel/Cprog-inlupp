@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
 
 
 
-	gameEngine.run();
+	gameEngine.run(60);
 
 	return 0;
 }

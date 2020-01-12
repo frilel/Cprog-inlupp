@@ -10,7 +10,11 @@
 #include "Sprite.h"
 
 
-//class Sprite;
+/*
+Tillhör den generella delen.
+Själva spelmotorn som tillämparen kommer få använda sig av.
+*/
+
 class GameEngine {
 
 public:
@@ -18,7 +22,7 @@ public:
 	~GameEngine();
 
 	void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
-	void run();
+	void run(int fps); // Argument tar med önskad Frames Per Second
 	void clean();
 
 	void handleEvents( std::vector<Sprite*> &activeSprites);

@@ -1,6 +1,5 @@
 #include "Sprite.h"
 #include "SDL_System.h"
-//#include "GameEngine.h"
 #include <iostream>
 
 Sprite::~Sprite() {
@@ -8,14 +7,13 @@ Sprite::~Sprite() {
 	std::cout << "Sprite deconstructed, objTexture destroyed..." << std::endl;
 }
 
-Sprite::Sprite(const char* filenamePath, int x, int y, int w, int h, int moveSpeed) : generatedSprite(nullptr) {
+Sprite::Sprite(const char* filenamePath, int x, int y, int w, int h) : generatedSprite(nullptr), imDead(false) {
 	
 	objTexture = SDLsystem.LoadTexture(filenamePath); //Texture skapas och sparas i objTexture, används av render()
 	std::cout << "objTexture loaded with: " << filenamePath << std::endl;
-
-
+	
 	// initialisera hastigheten
-	speed = moveSpeed;
+	//moveSpeed = speed;
 
 	// startpositionen
 	xpos = x; 
@@ -34,18 +32,9 @@ Sprite::Sprite(const char* filenamePath, int x, int y, int w, int h, int moveSpe
 	destRect.h = srcRect.h;
 	
 }
-/*
-void Sprite::update(int winW, int winH, std::vector<Sprite*> &activeSprites) { // rörelse och händelser sker här! TA EMOT GameEngine OCH KOLLA KOLLISION MED WINDOW OCH ANDRA SPRITES ?
-	std::cout << "Sprite update in Sprite.cpp!" << std::endl;
-	// Spriten rör på sig enligt xpos, ypos som standard
-	destRect.x = xpos; 
-	destRect.y = ypos;
-
-}*/
 
 void Sprite::render() { // Draw...
 	SDLsystem.Draw(objTexture, srcRect, destRect);
-
 }
 
 SDL_Rect& Sprite::getSrcRect() {
