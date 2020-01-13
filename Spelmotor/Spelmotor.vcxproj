@@ -126,7 +126,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="ImmovableSprite.cpp" />
+    <ClCompile Include="Laser.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MovableSprite.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SDL_System.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="ImmovableSprite.h" />
+    <ClInclude Include="Laser.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MovableSprite.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="SDL_System.h" />
+    <ClInclude Include="Sprite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\characters\enemy.png" />
+    <Image Include="assets\characters\player.png" />
+    <Image Include="assets\mapTiles\black.png" />
+    <Image Include="assets\mapTiles\blue.png" />
+    <Image Include="assets\mapTiles\darkPurple.png" />
+    <Image Include="assets\mapTiles\dirt.png" />
+    <Image Include="assets\mapTiles\grass.png" />
+    <Image Include="assets\mapTiles\purple.png" />
+    <Image Include="assets\mapTiles\water.png" />
+    <Image Include="assets\weapons\laserBlue01.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

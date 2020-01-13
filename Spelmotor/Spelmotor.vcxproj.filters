@@ -13,10 +13,110 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\assets">
+      <UniqueIdentifier>{5dd9d133-b482-40a7-8389-693ba191dc61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\assets\characters">
+      <UniqueIdentifier>{045c2401-04cc-499c-9f40-154ad9a04fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\assets\mapTiles">
+      <UniqueIdentifier>{85a5782c-0b46-49e9-afd9-966850c413c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\assets\weapons">
+      <UniqueIdentifier>{02fb01b9-228d-464c-8fe1-186477dc6abc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImmovableSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Laser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MovableSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_System.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImmovableSprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Laser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MovableSprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_System.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\characters\enemy.png">
+      <Filter>Resource Files\assets\characters</Filter>
+    </Image>
+    <Image Include="assets\characters\player.png">
+      <Filter>Resource Files\assets\characters</Filter>
+    </Image>
+    <Image Include="assets\mapTiles\black.png">
+      <Filter>Resource Files\assets\mapTiles</Filter>
+    </Image>
+    <Image Include="assets\mapTiles\blue.png">
+      <Filter>Resource Files\assets\mapTiles</Filter>
+    </Image>
+    <Image Include="assets\mapTiles\darkPurple.png">
+      <Filter>Resource Files\assets\mapTiles</Filter>
+    </Image>
+    <Image Include="assets\mapTiles\dirt.png">
+      <Filter>Resource Files\assets\mapTiles</Filter>
+    </Image>
+    <Image Include="assets\mapTiles\grass.png">
+      <Filter>Resource Files\assets\mapTiles</Filter>
+    </Image>
+    <Image Include="assets\mapTiles\purple.png">
+      <Filter>Resource Files\assets\mapTiles</Filter>
+    </Image>
+    <Image Include="assets\mapTiles\water.png">
+      <Filter>Resource Files\assets\mapTiles</Filter>
+    </Image>
+    <Image Include="assets\weapons\laserBlue01.png">
+      <Filter>Resource Files\assets\weapons</Filter>
+    </Image>
   </ItemGroup>
 </Project>
