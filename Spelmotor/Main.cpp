@@ -20,8 +20,19 @@ int main(int argc, char** argv) {
 	Player* player = Player::getInstance("assets/characters/player.png", 400, 600, 42, 32, 8);
 	gameEngine.add(player);
 
-	Enemy* enemy1 = Enemy::getInstance("assets/characters/enemy.png", 400, 100, 35, 32, 1);
+	Enemy* enemy1 = Enemy::getInstance("assets/characters/enemy.png", 400, 200, 35, 32, 1);
 	gameEngine.add(enemy1);
+	Enemy* enemy2 = Enemy::getInstance("assets/characters/enemy.png", 400, 0, 35, 32, 3);
+	gameEngine.add(enemy2);
+	/*
+	int speed = 1;
+	for (int y = 0; y < 800; y+=40) {
+		if (speed > 5)
+			speed = 1;
+		gameEngine.add(Enemy::getInstance("assets/characters/enemy.png", y, 0, 35, 32, speed));
+		speed++;
+		
+	}*/
 
 
 
